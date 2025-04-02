@@ -1,180 +1,215 @@
+import 'package:complex_ui_task/utilities/app_main_color.dart';
+import 'package:complex_ui_task/widgets/auth_appbar.dart';
+import 'package:complex_ui_task/widgets/button_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
+import '../utilities/responsive.dart';
+import '../widgets/login_button_google_apple.dart';
+import '../widgets/passwordField_custom.dart';
+import '../widgets/radio_button_custom.dart';
+import '../widgets/textform_custom.dart';
 
-import '../utilities/assets_path.dart';
-
-class SignUp extends ConsumerWidget {
+class SignUp extends ConsumerStatefulWidget {
   const SignUp({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    //Responsive Design
-    double sizeH(double size) {
-      final screenHeight = MediaQuery.of(context).size.height;
-      const double baselineHeight = 849;
-      return size * (screenHeight / baselineHeight);
-    }
+  ConsumerState<SignUp> createState() => _SignUpState();
+}
 
-    double sizeW(double size) {
-      final screenWidth = MediaQuery.of(context).size.width;
-      const double baselineWidth = 375;
-      return size * (screenWidth / baselineWidth);
-    }
+class _SignUpState extends ConsumerState<SignUp> {
+  final TextEditingController _email = TextEditingController();
+  final TextEditingController _name = TextEditingController();
+  final TextEditingController _birthDate = TextEditingController();
+  final TextEditingController _password = TextEditingController();
 
+  @override
+  void dispose() {
+    super.dispose();
+    _email.dispose();
+    _password.dispose();
+    _name.dispose();
+    _birthDate.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.white,
-      appBar: AppBar(
-        // backgroundColor: Colors.white,
-        title: Image.asset(ImagesPath.mainLogo),
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: sizeW(20)),
-            child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    elevation: 0.5,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(sizeW(4)),
-                    )),
-                onPressed: () {},
-                child: Row(
-                  children: [
-                    Text(
-                      "English (UK)",
-                      style: TextStyle(
-                          fontSize: sizeW(16), color: Color(0xff959eae)),
-                    ),
-                    Icon(
-                      Icons.keyboard_arrow_down_outlined,
-                      size: sizeW(24),
-                      color: Color(0xff4e5d78),
-                    )
-                  ],
-                )),
-          )
-        ],
-      ),
-      body: Padding(
-        padding: EdgeInsets.only(top: sizeH(30)),
+      backgroundColor: Colors.white,
+      appBar: authAppBar(context),
+      body: SingleChildScrollView(
         child: Center(
-          child: Column(
-            spacing: sizeW(10),
-            children: [
-              Text(
-                "Getting Started",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xff4E5D78),
-                ),
-              ),
-              SizedBox(
-                width: sizeW(281),
-                child: Text(
-                  "Create an account to continue and connect with the people.",
-                  textAlign: TextAlign.center,
+          child: Padding(
+            padding: EdgeInsets.only(top: Responsive.sizeH(context, 40)),
+            child: Column(
+              spacing: Responsive.sizeH(context, 10),
+              children: [
+                Text(
+                  "Getting Started",
                   style: TextStyle(
-                    fontSize: 14,
+                    fontFamily: 'roboto',
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
                     color: Color(0xff4E5D78),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: sizeH(15),
-              ),
-              Container(
-                width: sizeW(327),
-                height: sizeH(507),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(sizeW(20)),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.all(sizeW(25)),
-                  child: Column(
-                    spacing: sizeW(15),
-                    children: [
-                      Row(
-                        spacing: sizeW(16),
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              padding: EdgeInsets.all(sizeW(5)),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(sizeW(4)),
-                              ),
-                            ),
-                            icon: Image.asset(
-                              ImagesPath.googleIcon,
-                              width: sizeW(15),
-                              height: sizeH(15),
-                            ),
-                            label: Text(
-                              "Log in with Google",
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w500,
-                                  fontFamily: 'roboto',
-                                  color: Color(0xff4e5d78)),
-                            ),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              padding: EdgeInsets.all(sizeW(5)),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(sizeW(4)),
-                              ),
-                            ),
-                            icon: Icon(
-                              Icons.apple,
-                              size: 25,
-                            ),
-                            label: Text(
-                              "Log in with Apple",
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w500,
-                                  color: Color(0xff4e5d78)),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        spacing: sizeW(16),
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SizedBox(
-                            width: sizeW(115),
-                            child: Divider(
-                              color: Color(0xffdcdfe4),
-                              thickness: 1,
-                            ),
-                          ),
-                          Text(
-                            "OR",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 10,
-                                fontFamily: 'roboto',
-                                color: Color(0xff4E5D78)),
-                          ),
-                          SizedBox(
-                            width: sizeW(115),
-                            child: Divider(
-                              color: Color(0xffdcdfe4),
-                              thickness: 1,
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
+                SizedBox(
+                  width: Responsive.sizeW(context, 281),
+                  child: Text(
+                    "Create an account to continue and connect with the people.",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'roboto',
+                      fontSize: 14,
+                      color: Color(0xff4E5D78),
+                    ),
                   ),
                 ),
-              )
-            ],
+                SizedBox( height: Responsive.sizeH(context, 20),),
+                SizedBox(
+                  width: Responsive.sizeW(context, 333),
+                  height: Responsive.sizeH(context, 530),
+                  child: Card(
+                    elevation: 1,
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(Responsive.sizeW(context, 20)),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(Responsive.sizeW(context, 25)),
+                      child: Column(
+                        spacing: Responsive.sizeW(context, 12),
+                        children: [
+                          LoginButtonGoogleApple(),
+                          Row(
+                            spacing: Responsive.sizeW(context, 16),
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                width: Responsive.sizeW(context, 115),
+                                child: Divider(
+                                  color: Color(0xffdcdfe4),
+                                  thickness: 1,
+                                ),
+                              ),
+                              Text(
+                                "OR",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 10,
+                                    fontFamily: 'roboto',
+                                    color: Color(0xff4E5D78)),
+                              ),
+                              SizedBox(
+                                width: Responsive.sizeW(context, 115),
+                                child: Divider(
+                                  color: Color(0xffdcdfe4),
+                                  thickness: 1,
+                                ),
+                              ),
+                            ],
+                          ),
+                          TextFormFieldCustomized(
+                            controller: _email,
+                            hintText: "Your Email",
+                            icon: const Icon(
+                              Icons.alternate_email_rounded,
+                              color: Color(0xff4e5d78),
+                            ),
+                            keyboardType: TextInputType.emailAddress,
+                            validator: (email) {
+                              if (email == null || email.trim().isEmpty) {
+                                return "Please enter an email address.";
+                              }
+                              String emailPattern =
+                                  r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$';
+                              RegExp regex = RegExp(emailPattern);
+                              if (!regex.hasMatch(email)) {
+                                return "Please enter a valid email address.";
+                              }
+                              return null;
+                            },
+                          ),
+                          TextFormFieldCustomized(
+                            controller: _name,
+                            hintText: "Your Name",
+                            icon: const Icon(
+                              Icons.face,
+                              color: Color(0xff4e5d78),
+                            ),
+                            keyboardType: TextInputType.name,
+                            validator: (name) {
+                              if (name == null || name.isEmpty) {
+                                return "Please fill this";
+                              }
+                              if (name.length < 8) {
+                                return "Please enter your full name";
+                              }
+                              return null;
+                            },
+                          ),
+                          PasswordTextField(
+                            passwordController: _password,
+                          ),
+                          TextFormFieldCustomized(
+                            controller: _birthDate,
+                            hintText: "Date of birth",
+                            icon: const Icon(
+                              Icons.calendar_today_outlined,
+                              color: Color(0xff4e5d78),
+                            ),
+                            keyboardType: TextInputType.datetime,
+                            validator: (birthDate) {
+                              if (birthDate == null ||
+                                  birthDate.trim().isEmpty) {
+                                return "Please enter your birth date.";
+                              }
+                              final dateFormat = DateFormat("dd/MM/yyyy");
+                              try {
+                                DateTime parsedDate =
+                                    dateFormat.parseStrict(birthDate);
+                                if (parsedDate.isAfter(DateTime.now())) {
+                                  return "Birth date cannot be in the future.";
+                                }
+                              } catch (e) {
+                                return "Please enter a valid date (DD/MM/YYYY).";
+                              }
+                              return null;
+                            },
+                          ),
+                          RadioButtonCustom(),
+                          ButtonCustom(text: "Sign Up"),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Already have an account?",
+                                style: TextStyle(
+                                  fontFamily: 'roboto',
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color(0xff4E5D78),
+                                ),
+                              ),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Sign In",
+                                    style: TextStyle(
+                                      fontFamily: 'roboto',
+                                      fontSize: 12,
+                                      color: AppMainColor.primaryColor,
+                                    ),
+                                  ))
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

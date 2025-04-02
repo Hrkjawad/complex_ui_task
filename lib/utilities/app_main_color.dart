@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppMainColor {
-  Map<int, Color> blueColor = {
+  static Map<int, Color> blueColor = {
     50: const Color.fromRGBO(25, 125, 255, .1),
     100: const Color.fromRGBO(25, 125, 255, .2),
     200: const Color.fromRGBO(25, 125, 255, .3),
@@ -14,8 +14,8 @@ class AppMainColor {
     900: const Color.fromRGBO(25, 125, 255, 1),
   };
 
-  static Color primaryColor = const Color(0x00377dff);
-  static Color greenColor = const Color(0x0038CB89);
-  static Color yellowColor = const Color(0x0038CB89);
-  static Color redColor = const Color(0x0038CB89);
+  static const Color primaryColor = Color(0xff377dff);
+  static const Color greenColor = Color(0xff38CB89);
+  static const Color yellowColor = Color(0xffFFEB3B);
+  static const Color redColor = Color(0xffF44336);
 }

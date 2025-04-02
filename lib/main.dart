@@ -15,9 +15,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Complex UI Task',
         theme: ThemeData(
-          primarySwatch: MaterialColor(AppMainColor.primaryColor.value, AppMainColor().blueColor),
-          colorScheme: ColorScheme.fromSeed(seedColor: AppMainColor.primaryColor),
-          useMaterial3: true,
+          primarySwatch: MaterialColor(AppMainColor.primaryColor.toARGB32(), AppMainColor.blueColor),
+          useMaterial3: false,
         ),
         home: const SignUp(),
       ),
