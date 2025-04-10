@@ -6,10 +6,11 @@ AppBar authAppBar(context){
   return AppBar(
     elevation: 0,
     backgroundColor: Colors.white,
+    automaticallyImplyLeading: false,
     title: Image.asset(ImagesPath.mainLogo),
     actions: [
       Padding(
-        padding: EdgeInsets.only(right: Responsive.sizeW(context, 20)),
+        padding: EdgeInsets.only(right: Responsive.sizeW(context, 15)),
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
