@@ -1,3 +1,4 @@
+import 'package:complex_ui_task/auth_ui/login.dart';
 import 'package:complex_ui_task/utilities/app_main_color.dart';
 import 'package:complex_ui_task/widgets/auth_appbar.dart';
 import 'package:complex_ui_task/widgets/button_custom.dart';
@@ -65,7 +66,9 @@ class _SignUpState extends ConsumerState<SignUp> {
                     ),
                   ),
                 ),
-                SizedBox( height: Responsive.sizeH(context, 20),),
+                SizedBox(
+                  height: Responsive.sizeH(context, 20),
+                ),
                 SizedBox(
                   width: Responsive.sizeW(context, 333),
                   height: Responsive.sizeH(context, 530),
@@ -192,7 +195,12 @@ class _SignUpState extends ConsumerState<SignUp> {
                                 ),
                               ),
                               TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Login()));
+                                  },
                                   child: Text(
                                     "Sign In",
                                     style: TextStyle(
