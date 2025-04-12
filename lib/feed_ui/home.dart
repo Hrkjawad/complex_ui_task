@@ -1,3 +1,5 @@
+import 'package:complex_ui_task/feed_ui/create_post.dart';
+import 'package:complex_ui_task/feed_ui/widgets/bottom_nav.dart';
 import 'package:complex_ui_task/feed_ui/widgets/events_box.dart';
 import 'package:complex_ui_task/feed_ui/widgets/home_appbar.dart';
 import 'package:complex_ui_task/feed_ui/widgets/post_section.dart';
@@ -110,6 +112,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
+
               //add post section
               ColoredBox(
                 color: Colors.white,
@@ -227,7 +230,10 @@ class HomePage extends StatelessWidget {
                               width: Responsive.sizeW(context, 50),
                             ),
                             ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> CreatePost()));
+
+                                },
                                 child: Text(
                                   "Post",
                                   style: TextStyle(
@@ -243,6 +249,7 @@ class HomePage extends StatelessWidget {
                       ],
                     )),
               ),
+
               //show post section
               ColoredBox(
                 color: Colors.white,
@@ -271,6 +278,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
+
               //recent event
               ColoredBox(
                 color: Colors.white,
@@ -321,6 +329,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
+
               //post2
               ColoredBox(
                 color: Colors.white,
@@ -732,41 +741,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: NavigationBar(
-          backgroundColor: Colors.white,
-          height: 56,
-          destinations: [
-            NavigationDestination(
-                icon: Icon(
-                  Icons.grid_view,
-                  color: AppMainColor.textColor,
-                ),
-                label: "Feed"),
-            NavigationDestination(
-                icon: Icon(
-                  Icons.people_outline,
-                  color: AppMainColor.textColor,
-                ),
-                label: "My community"),
-            NavigationDestination(
-                icon: Icon(
-                  Icons.public,
-                  color: AppMainColor.textColor,
-                ),
-                label: "Explore"),
-            NavigationDestination(
-                icon: Icon(
-                  Icons.notifications,
-                  color: AppMainColor.textColor,
-                ),
-                label: "Notification"),
-            NavigationDestination(
-                icon: Icon(
-                  Icons.settings,
-                  color: AppMainColor.textColor,
-                ),
-                label: "Settings"),
-          ]),
+      bottomNavigationBar: BottomNav(),
     );
   }
 }
