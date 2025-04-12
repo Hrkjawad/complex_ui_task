@@ -5,6 +5,9 @@ class ImagesPath {
   static const String firstImage = "assets/images/first_image.webp";
   static const String postImage = "assets/images/post_image.webp";
   static const String mainLogo = "assets/logos/logo.webp";
+  static const String logo1 = "assets/logos/Logo1.webp";
+  static const String logo2 = "assets/logos/Logo2.webp";
+  static const String logo3 = "assets/logos/Logo3.webp";
   static const String googleIcon = "assets/logos/google_icon.webp";
   static const String avatar1 = "assets/peoples/avatar1.webp";
   static const String avatar2 = "assets/peoples/avatar2.webp";

@@ -1,14 +1,15 @@
 import 'package:complex_ui_task/auth_ui/forgot_pass.dart';
 import 'package:complex_ui_task/auth_ui/signup.dart';
 import 'package:complex_ui_task/utilities/app_main_color.dart';
-import 'package:complex_ui_task/widgets/auth_appbar.dart';
-import 'package:complex_ui_task/widgets/button_custom.dart';
+import 'package:complex_ui_task/auth_ui/widgets/auth_appbar.dart';
+import 'package:complex_ui_task/auth_ui/widgets/button_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../feed_ui/home.dart';
 import '../utilities/responsive.dart';
-import '../widgets/login_button_google_apple.dart';
-import '../widgets/passwordField_custom.dart';
-import '../widgets/textform_custom.dart';
+import '../auth_ui/widgets/login_button_google_apple.dart';
+import '../auth_ui/widgets/passwordField_custom.dart';
+import '../auth_ui/widgets/textform_custom.dart';
 
 class Login extends ConsumerStatefulWidget {
   const Login({super.key});
@@ -20,7 +21,7 @@ class Login extends ConsumerStatefulWidget {
 class _LoginState extends ConsumerState<Login> {
   final TextEditingController _email = TextEditingController();
   final TextEditingController _password = TextEditingController();
-  bool checkbox = false;
+  final checkbox = StateProvider<bool>((ref) => false);
 
   @override
   void dispose() {
@@ -135,29 +136,34 @@ class _LoginState extends ConsumerState<Login> {
                           Row(
                             children: [
                               Flexible(
-                                child: CheckboxListTile(
-                                  contentPadding: EdgeInsets.zero,
-                                  title: Text(
-                                    "Remember me",
-                                    style: TextStyle(
-                                        fontSize: 14,
-                                        fontFamily: 'roboto',
-                                        fontWeight: FontWeight.w600,
-                                        color: Color(0xff4E5D78)),
-                                  ),
-                                  value: checkbox,
-                                  onChanged: (newBool) {
-                                    setState(() {
-                                      checkbox = newBool!;
-                                    });
-                                  },
-                                  controlAffinity:
-                                      ListTileControlAffinity.leading,
-                                ),
+                                child: Consumer(builder: (context, ref, child) {
+                                  return CheckboxListTile(
+                                    contentPadding: EdgeInsets.zero,
+                                    title: Text(
+                                      "Remember me",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          fontFamily: 'roboto',
+                                          fontWeight: FontWeight.w600,
+                                          color: Color(0xff4E5D78)),
+                                    ),
+                                    value: ref.watch(checkbox),
+                                    onChanged: (newBool) {
+                                      ref.read(checkbox.notifier).state =
+                                          newBool!;
+                                    },
+                                    controlAffinity:
+                                        ListTileControlAffinity.leading,
+                                  );
+                                }),
                               ),
                               TextButton(
                                 onPressed: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> ForgotPassword()));
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              ForgotPassword()));
                                 },
                                 child: Text(
                                   "Forgot Password?",
@@ -170,7 +176,15 @@ class _LoginState extends ConsumerState<Login> {
                               ),
                             ],
                           ),
-                          ButtonCustom(text: "Sign In"),
+                          ButtonCustom(
+                            text: "Sign In",
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => HomePage()));
+                            },
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [

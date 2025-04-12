@@ -1,15 +1,16 @@
 import 'package:complex_ui_task/auth_ui/login.dart';
+import 'package:complex_ui_task/feed_ui/home.dart';
 import 'package:complex_ui_task/utilities/app_main_color.dart';
-import 'package:complex_ui_task/widgets/auth_appbar.dart';
-import 'package:complex_ui_task/widgets/button_custom.dart';
+import 'package:complex_ui_task/auth_ui/widgets/auth_appbar.dart';
+import 'package:complex_ui_task/auth_ui/widgets/button_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import '../utilities/responsive.dart';
-import '../widgets/login_button_google_apple.dart';
-import '../widgets/passwordField_custom.dart';
-import '../widgets/radio_button_custom.dart';
-import '../widgets/textform_custom.dart';
+import '../auth_ui/widgets/login_button_google_apple.dart';
+import '../auth_ui/widgets/passwordField_custom.dart';
+import '../auth_ui/widgets/radio_button_custom.dart';
+import '../auth_ui/widgets/textform_custom.dart';
 
 class SignUp extends ConsumerStatefulWidget {
   const SignUp({super.key});
@@ -181,7 +182,15 @@ class _SignUpState extends ConsumerState<SignUp> {
                             },
                           ),
                           RadioButtonCustom(),
-                          ButtonCustom(text: "Sign Up"),
+                          ButtonCustom(
+                            text: "Sign Up",
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => HomePage()));
+                            },
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [

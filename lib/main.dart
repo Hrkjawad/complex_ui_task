@@ -17,6 +17,14 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: MaterialColor(AppMainColor.primaryColor.toARGB32(), AppMainColor.blueColor),
           useMaterial3: false,
+          navigationBarTheme: NavigationBarThemeData(
+            labelTextStyle: WidgetStateProperty.resolveWith<TextStyle>((states) {
+              return TextStyle(
+                fontSize: states.contains(WidgetState.selected) ? 12 : 10,
+                color: states.contains(WidgetState.selected) ? Colors.blue : AppMainColor.textColor,
+              );
+            }),
+          ),
         ),
         home: const SignUp(),
       ),

@@ -1,11 +1,12 @@
 import 'package:complex_ui_task/auth_ui/login.dart';
 import 'package:complex_ui_task/utilities/app_main_color.dart';
-import 'package:complex_ui_task/widgets/auth_appbar.dart';
-import 'package:complex_ui_task/widgets/button_custom.dart';
+import 'package:complex_ui_task/auth_ui/widgets/auth_appbar.dart';
+import 'package:complex_ui_task/auth_ui/widgets/button_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../feed_ui/home.dart';
 import '../utilities/responsive.dart';
-import '../widgets/textform_custom.dart';
+import '../auth_ui/widgets/textform_custom.dart';
 
 class ForgotPassword extends ConsumerStatefulWidget {
   const ForgotPassword({super.key});
@@ -66,7 +67,7 @@ class _ForgotPasswordState extends ConsumerState<ForgotPassword> {
                     elevation: 1,
                     shape: RoundedRectangleBorder(
                       borderRadius:
-                      BorderRadius.circular(Responsive.sizeW(context, 20)),
+                          BorderRadius.circular(Responsive.sizeW(context, 20)),
                     ),
                     child: Padding(
                       padding: EdgeInsets.all(Responsive.sizeW(context, 25)),
@@ -94,11 +95,23 @@ class _ForgotPasswordState extends ConsumerState<ForgotPassword> {
                               return null;
                             },
                           ),
-                          ButtonCustom(text: "Send"),
+                          ButtonCustom(
+                            text: "Send",
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => HomePage()));
+                            },
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.arrow_back_ios, color: AppMainColor.primaryColor, size: 15,),
+                              Icon(
+                                Icons.arrow_back_ios,
+                                color: AppMainColor.primaryColor,
+                                size: 15,
+                              ),
                               TextButton(
                                   onPressed: () {
                                     Navigator.push(
