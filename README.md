@@ -1,16 +1,13 @@
-# complex_ui_task
+# Flutter Complex UI Task
+- Auth Page
+- Home Feed Page
+- Post Page
 
-practice a complex ui design.
+![image alt](https://github.com/Hrkjawad/complex_ui_task/blob/10263b885adeb9bf3b430ec9015a07f2ec105be6/Screenshot_20250413_161506.png)
+![image alt](https://github.com/Hrkjawad/complex_ui_task/blob/10263b885adeb9bf3b430ec9015a07f2ec105be6/Screenshot_20250413_161533.png)
+![image alt](https://github.com/Hrkjawad/complex_ui_task/blob/10263b885adeb9bf3b430ec9015a07f2ec105be6/Screenshot_20250413_161547.png)
+![image alt](https://github.com/Hrkjawad/complex_ui_task/blob/10263b885adeb9bf3b430ec9015a07f2ec105be6/Screenshot_20250413_161602.png)
+![image alt](https://github.com/Hrkjawad/complex_ui_task/blob/10263b885adeb9bf3b430ec9015a07f2ec105be6/Screenshot_20250413_161620.png)
+![image alt](https://github.com/Hrkjawad/complex_ui_task/blob/10263b885adeb9bf3b430ec9015a07f2ec105be6/Screenshot_20250413_161643.png)
+![image alt](https://github.com/Hrkjawad/complex_ui_task/blob/10263b885adeb9bf3b430ec9015a07f2ec105be6/Screenshot_20250413_161657.png)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
