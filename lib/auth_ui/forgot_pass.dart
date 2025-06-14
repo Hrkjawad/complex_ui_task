@@ -32,9 +32,9 @@ class _ForgotPasswordState extends ConsumerState<ForgotPassword> {
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.only(top: Responsive.sizeH(context, 40)),
+            padding: EdgeInsets.only(top: Responsive.sizeH(40)),
             child: Column(
-              spacing: Responsive.sizeH(context, 10),
+              spacing: Responsive.sizeH(10),
               children: [
                 Text(
                   "Forgot password?",
@@ -46,7 +46,7 @@ class _ForgotPasswordState extends ConsumerState<ForgotPassword> {
                   ),
                 ),
                 SizedBox(
-                  width: Responsive.sizeW(context, 281),
+                  width: Responsive.sizeW(281),
                   child: Text(
                     "Enter your details to receive a rest link",
                     textAlign: TextAlign.center,
@@ -58,21 +58,21 @@ class _ForgotPasswordState extends ConsumerState<ForgotPassword> {
                   ),
                 ),
                 SizedBox(
-                  height: Responsive.sizeH(context, 20),
+                  height: Responsive.sizeH(20),
                 ),
                 SizedBox(
-                  width: Responsive.sizeW(context, 333),
-                  height: Responsive.sizeH(context, 214),
+                  width: Responsive.sizeW(333),
+                  height: Responsive.sizeH(214),
                   child: Card(
                     elevation: 1,
                     shape: RoundedRectangleBorder(
                       borderRadius:
-                          BorderRadius.circular(Responsive.sizeW(context, 20)),
+                          BorderRadius.circular(Responsive.sizeW(20)),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(Responsive.sizeW(context, 25)),
+                      padding: EdgeInsets.all(Responsive.sizeW(25)),
                       child: Column(
-                        spacing: Responsive.sizeW(context, 12),
+                        spacing: Responsive.sizeW(12),
                         children: [
                           TextFormFieldCustomized(
                             controller: _email,

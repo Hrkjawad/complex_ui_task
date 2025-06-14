@@ -10,14 +10,14 @@ AppBar authAppBar(context){
     title: Image.asset(ImagesPath.mainLogo),
     actions: [
       Padding(
-        padding: EdgeInsets.only(right: Responsive.sizeW(context, 20)),
+        padding: EdgeInsets.only(right: Responsive.sizeW(20)),
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 elevation: 0.5,
                 shape: RoundedRectangleBorder(
                   borderRadius:
-                  BorderRadius.circular(Responsive.sizeW(context, 4)),
+                  BorderRadius.circular(Responsive.sizeW(4)),
                 )),
             onPressed: () {},
             child: Row(
@@ -28,7 +28,7 @@ AppBar authAppBar(context){
                 ),
                 Icon(
                   Icons.keyboard_arrow_down_outlined,
-                  size: Responsive.sizeW(context, 24),
+                  size: Responsive.sizeW(24),
                   color: Color(0xff4e5d78),
                 )
               ],

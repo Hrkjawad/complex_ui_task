@@ -1,30 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../auth_logic/login_with_google.dart';
 import '../../utilities/assets_path.dart';
 import '../../utilities/responsive.dart';
 
-class LoginButtonGoogleApple extends StatelessWidget {
+class LoginButtonGoogleApple extends ConsumerWidget {
   const LoginButtonGoogleApple({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
     return Row(
-      spacing: Responsive.sizeW(context, 16),
+      spacing: Responsive.sizeW(10),
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         ElevatedButton.icon(
-          onPressed: () {},
+          onPressed:  () => ref.read(authProvider.notifier).signIn(context),
           style: ElevatedButton.styleFrom(
             backgroundColor: Color(0xfff6f7f8),
             elevation: 0,
-            padding: EdgeInsets.all(Responsive.sizeW(context, 5)),
+            padding: EdgeInsets.all(Responsive.sizeW(5)),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(Responsive.sizeW(context, 4)),
+              borderRadius: BorderRadius.circular(Responsive.sizeW(4)),
             ),
           ),
           icon: Image.asset(
             ImagesPath.googleIcon,
-            width: Responsive.sizeW(context, 15),
-            height: Responsive.sizeH(context, 15),
+            width: Responsive.sizeW(15),
+            height: Responsive.sizeH(15),
           ),
           label: Text(
             "Log in with Google",
@@ -40,9 +42,9 @@ class LoginButtonGoogleApple extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: Color(0xfff6f7f8),
             elevation: 0,
-            padding: EdgeInsets.all(Responsive.sizeW(context, 5)),
+            padding: EdgeInsets.all(Responsive.sizeW(5)),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(Responsive.sizeW(context, 4)),
+              borderRadius: BorderRadius.circular(Responsive.sizeW(4)),
             ),
           ),
           icon: Icon(

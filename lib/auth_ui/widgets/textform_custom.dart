@@ -18,7 +18,7 @@ class TextFormFieldCustomized extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        width: Responsive.sizeW(context, 350),
+        width: Responsive.sizeW(350),
         child: StatefulBuilder(builder: (context, setState) {
           return TextFormField(
             controller: controller,
@@ -34,11 +34,11 @@ class TextFormFieldCustomized extends StatelessWidget {
                 color: const Color(0xff959eae),
               ),
               contentPadding: EdgeInsets.symmetric(
-                horizontal: Responsive.sizeW(context, 15),
+                horizontal: Responsive.sizeW(15),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(
-                  Responsive.sizeW(context, 4),
+                  Responsive.sizeW(4),
                 ),
                 borderSide: BorderSide(
                   color: Color(0xffdcdfe4),
@@ -46,7 +46,7 @@ class TextFormFieldCustomized extends StatelessWidget {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(
-                  Responsive.sizeW(context, 4),
+                  Responsive.sizeW(4),
                 ),
                 borderSide: BorderSide(
                   color: Color(0xffdcdfe4),
@@ -54,7 +54,7 @@ class TextFormFieldCustomized extends StatelessWidget {
               ),
               errorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(
-                  Responsive.sizeW(context, 4),
+                  Responsive.sizeW(4),
                 ),
                 borderSide: const BorderSide(
                   color: Colors.red,
@@ -62,7 +62,7 @@ class TextFormFieldCustomized extends StatelessWidget {
               ),
               focusedErrorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(
-                  Responsive.sizeW(context, 4),
+                  Responsive.sizeW(4),
                 ),
                 borderSide: const BorderSide(
                   color: Colors.red,

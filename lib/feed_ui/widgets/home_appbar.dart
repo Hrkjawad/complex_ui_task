@@ -11,12 +11,12 @@ AppBar homeAppBar(context) {
     backgroundColor: Colors.white,
     automaticallyImplyLeading: false,
     leading: Padding(
-      padding: EdgeInsets.only(left: Responsive.sizeW(context, 15)),
+      padding: EdgeInsets.only(left: Responsive.sizeW(15)),
       child: Image.asset(ImagesPath.avatar2),
     ),
     title: SizedBox(
-      width: Responsive.sizeW(context, 246),
-      height: Responsive.sizeH(context, 32),
+      width: Responsive.sizeW(246),
+      height: Responsive.sizeH(32),
       child: TextFormField(
         controller: search,
         keyboardType: TextInputType.text,
@@ -30,11 +30,11 @@ AppBar homeAppBar(context) {
             color: const Color(0xff959eae),
           ),
           contentPadding: EdgeInsets.symmetric(
-            horizontal: Responsive.sizeW(context, 15),
+            horizontal: Responsive.sizeW(15),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(
-              Responsive.sizeW(context, 4),
+              Responsive.sizeW(4),
             ),
             borderSide: BorderSide(
               color: Color(0xffdcdfe4),
@@ -42,7 +42,7 @@ AppBar homeAppBar(context) {
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(
-              Responsive.sizeW(context, 4),
+              Responsive.sizeW(4),
             ),
             borderSide: BorderSide(
               color: Color(0xffdcdfe4),
@@ -50,7 +50,7 @@ AppBar homeAppBar(context) {
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(
-              Responsive.sizeW(context, 4),
+              Responsive.sizeW(4),
             ),
             borderSide: const BorderSide(
               color: Colors.red,
@@ -58,7 +58,7 @@ AppBar homeAppBar(context) {
           ),
           focusedErrorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(
-              Responsive.sizeW(context, 4),
+              Responsive.sizeW(4),
             ),
             borderSide: const BorderSide(
               color: Colors.red,

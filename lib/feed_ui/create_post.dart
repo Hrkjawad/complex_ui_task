@@ -32,7 +32,7 @@ class CreatePost extends StatelessWidget {
                     "Create Post",
                     style: textStyle,
                   ),
-                  SizedBox(width: Responsive.sizeW(context, 94)),
+                  SizedBox(width: Responsive.sizeW(94)),
                   Text(
                     "Visible for",
                     style: textStyle.copyWith(
@@ -44,15 +44,15 @@ class CreatePost extends StatelessWidget {
                     width: 10,
                   ),
                   SizedBox(
-                    width: Responsive.sizeW(context, 70),
-                    height: Responsive.sizeH(context, 24),
+                    width: Responsive.sizeW(70),
+                    height: Responsive.sizeH(24),
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
                             elevation: 0.5,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(
-                                  Responsive.sizeW(context, 4)),
+                                  Responsive.sizeW(4)),
                             )),
                         onPressed: () {},
                         child: Row(
@@ -65,7 +65,7 @@ class CreatePost extends StatelessWidget {
                             ),
                             Icon(
                               Icons.keyboard_arrow_down_outlined,
-                              size: Responsive.sizeW(context, 10),
+                              size: Responsive.sizeW(10),
                               color: Color(0xff4e5d78),
                             )
                           ],
@@ -83,8 +83,8 @@ class CreatePost extends StatelessWidget {
                 spacing: 10,
                 children: [
                   SizedBox(
-                    width: Responsive.sizeW(context, 32),
-                    height: Responsive.sizeH(context, 32),
+                    width: Responsive.sizeW(32),
+                    height: Responsive.sizeH(32),
                     child: ClipOval(child: Image.asset(ImagesPath.avatar2)),
                   ),
                   Column(
@@ -93,8 +93,8 @@ class CreatePost extends StatelessWidget {
                     spacing: 5,
                     children: [
                       Container(
-                        width: Responsive.sizeW(context, 289),
-                        height: Responsive.sizeH(context, 170),
+                        width: Responsive.sizeW(289),
+                        height: Responsive.sizeH(170),
                         decoration:
                             BoxDecoration(borderRadius: BorderRadius.circular(6)),
                         child: TextFormField(

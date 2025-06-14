@@ -18,15 +18,15 @@ class RadioButtonCustom extends ConsumerWidget {
     final options = ref.watch(optionsName);
     final selectedOption = ref.watch(selectedOptions);
     return Container(
-      width: Responsive.sizeW(context, 350),
+      width: Responsive.sizeW(350),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(Responsive.sizeW(context, 4)),
+        borderRadius: BorderRadius.circular(Responsive.sizeW(4)),
         border: Border.all(color: const Color(0xffdcdfe4)),
       ),
       child: Row(
         children: [
           Padding(
-            padding: EdgeInsets.only(left: Responsive.sizeW(context, 10)),
+            padding: EdgeInsets.only(left: Responsive.sizeW(10)),
             child: const Icon(
               Icons.male_rounded,
               size: 25,

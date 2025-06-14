@@ -24,8 +24,8 @@ class PostSection extends StatelessWidget {
           leading: ClipOval(
             child: Image.asset(
               imagePath,
-              width: Responsive.sizeW(context, 45),
-              height: Responsive.sizeH(context, 45),
+              width: Responsive.sizeW(45),
+              height: Responsive.sizeH(45),
               fit: BoxFit.cover,
             ),
           ),
@@ -47,8 +47,8 @@ class PostSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SizedBox(
-              width: Responsive.sizeW(context, 60),
-              height: Responsive.sizeH(context, 20),
+              width: Responsive.sizeW(60),
+              height: Responsive.sizeH(20),
               child: Stack(
                 children: [
                   Positioned(

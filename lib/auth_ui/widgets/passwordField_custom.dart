@@ -13,7 +13,7 @@ class PasswordTextField extends StatelessWidget {
     bool isObscure = true;
     return Center(
       child: SizedBox(
-        width: Responsive.sizeW(context, 350),
+        width: Responsive.sizeW(350),
         child: StatefulBuilder(
           builder: (context, setState) {
             return TextFormField(
@@ -49,11 +49,11 @@ class PasswordTextField extends StatelessWidget {
                   color: const Color(0xff959eae),
                 ),
                 contentPadding:  EdgeInsets.symmetric(
-                  horizontal: Responsive.sizeW(context,15),
+                  horizontal: Responsive.sizeW(15),
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(
-                    Responsive.sizeW(context,4),
+                    Responsive.sizeW(4),
                   ),
                   borderSide: BorderSide(
                     color: Color(0xffdcdfe4),
@@ -61,7 +61,7 @@ class PasswordTextField extends StatelessWidget {
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(
-                    Responsive.sizeW(context,4),
+                    Responsive.sizeW(4),
                   ),
                   borderSide: BorderSide(
                     color: Color(0xffdcdfe4),
@@ -69,7 +69,7 @@ class PasswordTextField extends StatelessWidget {
                 ),
                 errorBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(
-                    Responsive.sizeW(context,4),
+                    Responsive.sizeW(4),
                   ),
                   borderSide: const BorderSide(
                     color: Colors.red,
@@ -77,7 +77,7 @@ class PasswordTextField extends StatelessWidget {
                 ),
                 focusedErrorBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(
-                    Responsive.sizeW(context,4),
+                    Responsive.sizeW(4),
                   ),
                   borderSide: const BorderSide(
                     color: Colors.red,

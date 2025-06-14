@@ -1,14 +1,22 @@
 import 'package:flutter/widgets.dart';
 
 class Responsive {
-  static double sizeW(BuildContext context, double size) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    const double baselineWidth = 375;
-    return size * (screenWidth / baselineWidth);
+  static double _screenWidth = 375;
+  static double _screenHeight = 849;
+
+  static void init(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    _screenWidth = size.width;
+    _screenHeight = size.height;
   }
-  static double sizeH(BuildContext context, double size) {
-    final screenWidth = MediaQuery.of(context).size.height;
-    const double baselineWidth = 849;
-    return size * (screenWidth / baselineWidth);
+
+  static double sizeW(double size) {
+    const double baselineWidth = 375;
+    return size * (_screenWidth / baselineWidth);
+  }
+
+  static double sizeH(double size) {
+    const double baselineHeight = 849;
+    return size * (_screenHeight / baselineHeight);
   }
 }

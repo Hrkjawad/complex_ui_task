@@ -10,8 +10,8 @@ class ButtonCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: Responsive.sizeW(context, 287),
-      height: Responsive.sizeH(context, 40),
+      width: Responsive.sizeW(287),
+      height: Responsive.sizeH(40),
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(elevation: 0),

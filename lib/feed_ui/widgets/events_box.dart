@@ -16,8 +16,8 @@ class EventBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: Responsive.sizeW(context, 335),
-        height: Responsive.sizeH(context, 115),
+        width: Responsive.sizeW(335),
+        height: Responsive.sizeH(115),
         decoration: BoxDecoration(
             color: Color(0xfffafafb),
             borderRadius: BorderRadius.circular(8)),

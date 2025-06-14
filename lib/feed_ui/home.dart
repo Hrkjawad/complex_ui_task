@@ -42,9 +42,9 @@ class HomePage extends StatelessWidget {
                 color: Colors.white,
                 child: Padding(
                   padding: EdgeInsets.only(
-                      left: Responsive.sizeW(context, 20),
-                      bottom: Responsive.sizeW(context, 20),
-                      top: Responsive.sizeW(context, 20)),
+                      left: Responsive.sizeW(20),
+                      bottom: Responsive.sizeW(20),
+                      top: Responsive.sizeW(20)),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -118,9 +118,9 @@ class HomePage extends StatelessWidget {
                 color: Colors.white,
                 child: Padding(
                     padding: EdgeInsets.only(
-                        left: Responsive.sizeW(context, 20),
-                        right: Responsive.sizeW(context, 20),
-                        top: Responsive.sizeW(context, 10)),
+                        left: Responsive.sizeW(20),
+                        right: Responsive.sizeW(20),
+                        top: Responsive.sizeW(10)),
                     child: Column(
                       spacing: 12,
                       children: [
@@ -133,8 +133,8 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              width: Responsive.sizeW(context, 284),
-                              height: Responsive.sizeH(context, 32),
+                              width: Responsive.sizeW(284),
+                              height: Responsive.sizeH(32),
                               child: TextFormField(
                                 controller: _post,
                                 keyboardType: TextInputType.text,
@@ -148,23 +148,23 @@ class HomePage extends StatelessWidget {
                                     color: const Color(0xff959eae),
                                   ),
                                   contentPadding: EdgeInsets.symmetric(
-                                    horizontal: Responsive.sizeW(context, 15),
+                                    horizontal: Responsive.sizeW(15),
                                   ),
                                   enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(
-                                      Responsive.sizeW(context, 4),
+                                      Responsive.sizeW(4),
                                     ),
                                     borderSide: BorderSide.none,
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(
-                                      Responsive.sizeW(context, 4),
+                                      Responsive.sizeW(4),
                                     ),
                                     borderSide: BorderSide.none,
                                   ),
                                   errorBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(
-                                      Responsive.sizeW(context, 4),
+                                      Responsive.sizeW(4),
                                     ),
                                     borderSide: const BorderSide(
                                       color: Colors.red,
@@ -172,7 +172,7 @@ class HomePage extends StatelessWidget {
                                   ),
                                   focusedErrorBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(
-                                      Responsive.sizeW(context, 4),
+                                      Responsive.sizeW(4),
                                     ),
                                     borderSide: const BorderSide(
                                       color: Colors.red,
@@ -187,7 +187,7 @@ class HomePage extends StatelessWidget {
                           ],
                         ),
                         Row(
-                          spacing: 8,
+                          spacing: 5,
                           children: [
                             Icon(
                               Icons.videocam_outlined,
@@ -199,7 +199,7 @@ class HomePage extends StatelessWidget {
                               style: textStyle.copyWith(fontSize: 12),
                             ),
                             SizedBox(
-                              width: Responsive.sizeW(context, 16),
+                              width: Responsive.sizeW(16),
                             ),
                             Icon(
                               Icons.insert_photo_outlined,
@@ -211,7 +211,7 @@ class HomePage extends StatelessWidget {
                               style: textStyle.copyWith(fontSize: 12),
                             ),
                             SizedBox(
-                              width: Responsive.sizeW(context, 16),
+                              width: Responsive.sizeW(16),
                             ),
                             Icon(
                               Icons.face,
@@ -227,7 +227,7 @@ class HomePage extends StatelessWidget {
                                   color: AppMainColor.textColor),
                             ),
                             SizedBox(
-                              width: Responsive.sizeW(context, 50),
+                              width: Responsive.sizeW(50),
                             ),
                             ElevatedButton(
                                 onPressed: () {
@@ -244,7 +244,7 @@ class HomePage extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          width: Responsive.sizeW(context, 14),
+                          width: Responsive.sizeW(14),
                         ),
                       ],
                     )),
@@ -255,9 +255,9 @@ class HomePage extends StatelessWidget {
                 color: Colors.white,
                 child: Padding(
                   padding: EdgeInsets.only(
-                      left: Responsive.sizeW(context, 20),
-                      right: Responsive.sizeW(context, 20),
-                      top: Responsive.sizeW(context, 10)),
+                      left: Responsive.sizeW(20),
+                      right: Responsive.sizeW(20),
+                      top: Responsive.sizeW(10)),
                   child: Column(
                     spacing: 9,
                     children: [
@@ -269,8 +269,8 @@ class HomePage extends StatelessWidget {
                         shareNum: '17',
                         imageGrid: Image.asset(
                           ImagesPath.firstImage,
-                          width: Responsive.sizeW(context, 335),
-                          height: Responsive.sizeH(context, 185),
+                          width: Responsive.sizeW(335),
+                          height: Responsive.sizeH(185),
                           fit: BoxFit.cover,
                         ),
                       )
@@ -284,8 +284,8 @@ class HomePage extends StatelessWidget {
                 color: Colors.white,
                 child: Padding(
                   padding: EdgeInsets.only(
-                    left: Responsive.sizeW(context, 20),
-                    right: Responsive.sizeW(context, 20),
+                    left: Responsive.sizeW(20),
+                    right: Responsive.sizeW(20),
                   ),
                   child: Column(
                     children: [
@@ -335,8 +335,8 @@ class HomePage extends StatelessWidget {
                 color: Colors.white,
                 child: Padding(
                   padding: EdgeInsets.only(
-                    left: Responsive.sizeW(context, 20),
-                    right: Responsive.sizeW(context, 20),
+                    left: Responsive.sizeW(20),
+                    right: Responsive.sizeW(20),
                   ),
                   child: Column(
                     children: [
@@ -394,8 +394,8 @@ class HomePage extends StatelessWidget {
               //comments
               Padding(
                 padding: EdgeInsets.only(
-                  left: Responsive.sizeW(context, 20),
-                  right: Responsive.sizeW(context, 20),
+                  left: Responsive.sizeW(20),
+                  right: Responsive.sizeW(20),
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -412,8 +412,8 @@ class HomePage extends StatelessWidget {
                       spacing: 5,
                       children: [
                         Container(
-                          width: Responsive.sizeW(context, 301),
-                          height: Responsive.sizeH(context, 91),
+                          width: Responsive.sizeW(301),
+                          height: Responsive.sizeH(91),
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(6)),
@@ -476,8 +476,8 @@ class HomePage extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  left: Responsive.sizeW(context, 58),
-                  right: Responsive.sizeW(context, 20),
+                  left: Responsive.sizeW(58),
+                  right: Responsive.sizeW(20),
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -494,8 +494,8 @@ class HomePage extends StatelessWidget {
                       spacing: 5,
                       children: [
                         Container(
-                          width: Responsive.sizeW(context, 259),
-                          height: Responsive.sizeH(context, 165),
+                          width: Responsive.sizeW(259),
+                          height: Responsive.sizeH(165),
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(6)),
@@ -519,8 +519,8 @@ class HomePage extends StatelessWidget {
                                   contentPadding: EdgeInsets.only(left: 10),
                                 ),
                                 Container(
-                                  width: Responsive.sizeW(context, 239),
-                                  height: Responsive.sizeH(context, 69),
+                                  width: Responsive.sizeW(239),
+                                  height: Responsive.sizeH(69),
                                   decoration: BoxDecoration(
                                       color: Color(0xfff6f7f8),
                                       borderRadius: BorderRadius.circular(6)),
@@ -590,7 +590,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: Responsive.sizeW(context, 20)),
+                padding: EdgeInsets.only(left: Responsive.sizeW(20)),
                 child: TextButton(
                   onPressed: () {},
                   child: Text(
@@ -605,8 +605,8 @@ class HomePage extends StatelessWidget {
                 color: Colors.white,
                 child: Padding(
                   padding: EdgeInsets.only(
-                    left: Responsive.sizeW(context, 20),
-                    right: Responsive.sizeW(context, 20),
+                    left: Responsive.sizeW(20),
+                    right: Responsive.sizeW(20),
                   ),
                   child: Column(
                     children: [
@@ -647,8 +647,8 @@ class HomePage extends StatelessWidget {
                         spacing: 10,
                         children: [
                           SizedBox(
-                            width: Responsive.sizeW(context, 291),
-                            height: Responsive.sizeH(context, 34),
+                            width: Responsive.sizeW(291),
+                            height: Responsive.sizeH(34),
                             child: TextFormField(
                               controller: _post,
                               keyboardType: TextInputType.text,
@@ -712,8 +712,8 @@ class HomePage extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Container(
-                        width: Responsive.sizeW(context, 335),
-                        height: Responsive.sizeH(context, 73),
+                        width: Responsive.sizeW(335),
+                        height: Responsive.sizeH(73),
                         decoration: BoxDecoration(
                             color: Color(0xfff6f7f8),
                             borderRadius: BorderRadius.circular(6)),
